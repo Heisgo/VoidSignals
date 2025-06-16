@@ -106,10 +106,10 @@ public class UIManager : MonoBehaviour
 2. **Global broadcaster**: any system can subscribe/unsubscribe without passing around instances.
 3. **Edit‑time debug**: visualize & fire signals without runtime hacks.
 4. **Zero null‑ref drama**: auto‑clean keeps your console silent.
-5. **One line to extend**: add `Vector3Signal`, `CustomDataSignal`, whatever — without touching core code.
+5. **One line to extend**: add `Vector3Signal`, `CustomDataSignal`, whatever -- without touching core code.
 
 ---
 
 ## ❤️ Thanks for trying Void Signals!
 
-If it saved you from another tangled event nightmare, drop a ⭐ on GitHub. Built with coffee, sweat, and too many null‑ref bugs fixed. 🚀
+If it saved you from another tangled event nightmare, drop a ⭐ on GitHub. Built with coffee, sweat, and too many null‑ref bugs fixed. 
