@@ -29,7 +29,7 @@ You now have an SO that can broadcast events globally.
 3. Hook up your method in the `UnityEvent` below. If it's a typed listener, you can drag methods with matching signatures (e.g. `void OnScoreChanged(int newScore)`).
 
 ### 3. Fire from code
-If you prefer code wiring, it's just as simple:
+If you prefer code wiring, it's just as simple, but you'll have to change the AddListener and RemoveListener from delegates to Actions.
 
 ```csharp
 public class PlayerHealth : MonoBehaviour
@@ -82,15 +82,10 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private IntSignalListener enemyCountListener;
     [SerializeField] private UnityEngine.UI.Text countText;
-    
-    private void Awake()
-    {
-        enemyCountListener.onSignal.AddListener(UpdateUI);
-    }
 
-    private void UpdateUI(int count)
+    private void UpdateUI(int count) // this method is linked in the inspector by a IntListener
     {
-        countText.text = $"Enemies: {count}";
+        countText.text = $"Enemies: {count}"; 
     }
 }
 ```
